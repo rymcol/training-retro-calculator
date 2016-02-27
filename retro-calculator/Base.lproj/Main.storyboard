@@ -24,6 +24,12 @@
                                     <constraint firstAttribute="width" secondItem="xuC-eJ-9u7" secondAttribute="height" multiplier="1:1" id="61i-FR-v3F"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-Ih-coP">
+                                <rect key="frame" x="0.0" y="528" width="600" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="a6J-Q6-Aid"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0sj-qw-fnq">
                                 <rect key="frame" x="-10" y="65" width="620" height="470"/>
                                 <subviews>
@@ -188,17 +194,32 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3T5-h7-Uv3">
+                                <rect key="frame" x="174" y="75" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="0Nl-5X-s7g"/>
+                                    <constraint firstAttribute="height" constant="50" id="Cyp-8B-2RF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="44"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cR7-Ih-coP" secondAttribute="trailing" id="1bI-SR-4bc"/>
+                            <constraint firstItem="cR7-Ih-coP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AgR-EX-MUQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cR7-Ih-coP" secondAttribute="bottom" id="C1O-bL-Plz"/>
                             <constraint firstItem="xuC-eJ-9u7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HLo-XF-UD7"/>
                             <constraint firstItem="0sj-qw-fnq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PuV-oZ-PA4"/>
                             <constraint firstItem="eud-QY-mn4" firstAttribute="centerX" secondItem="6Oy-bZ-Jaj" secondAttribute="centerX" id="Qho-Jb-q1s"/>
+                            <constraint firstItem="3T5-h7-Uv3" firstAttribute="top" secondItem="0sj-qw-fnq" secondAttribute="top" constant="10" id="ebz-YQ-zWJ"/>
                             <constraint firstItem="0sj-qw-fnq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="faF-hq-elt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xuC-eJ-9u7" secondAttribute="bottom" id="fxY-nH-eyj"/>
                             <constraint firstItem="eud-QY-mn4" firstAttribute="centerY" secondItem="6Oy-bZ-Jaj" secondAttribute="centerY" id="yEU-Qs-rpn"/>
                             <constraint firstAttribute="trailing" secondItem="xuC-eJ-9u7" secondAttribute="trailing" id="yRL-S0-pXN"/>
                             <constraint firstItem="xuC-eJ-9u7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zX8-kV-ddF"/>
+                            <constraint firstItem="3T5-h7-Uv3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zaV-HV-N8T"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -223,6 +244,7 @@
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
+        <image name="ground" width="888" height="72"/>
         <image name="multiply" width="111" height="114"/>
         <image name="space-bg" width="988" height="946"/>
         <image name="subtract" width="111" height="114"/>
