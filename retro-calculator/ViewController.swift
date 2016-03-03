@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         do {
             
           try buttonSound = AVAudioPlayer(contentsOfURL: soundURL)
+            buttonSound.volume = 0.25
             buttonSound.prepareToPlay()
             
         } catch let error as NSError {
