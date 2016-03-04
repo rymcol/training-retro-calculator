@@ -26,7 +26,7 @@ class Calculator {
     }
     
     func calculate () -> String {
-        
+        return ""
     }
     
     
