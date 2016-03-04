@@ -72,6 +72,15 @@ class ViewController: UIViewController {
         userIsTyping = false
     }
     
+    @IBAction func clear(sender: UIButton) {
+        playSound()
+        userIsTyping = false
+        display.text = "0"
+        leftString = ""
+        rightString = ""
+        lastTotal = "0"
+    }
+    
     func calculate (operation: Operation) -> String {
         
         if lastTotal != "0" {

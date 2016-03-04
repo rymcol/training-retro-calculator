@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,13 +19,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="xuC-eJ-9u7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchbg" translatesAutoresizingMaskIntoConstraints="NO" id="xuC-eJ-9u7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xuC-eJ-9u7" secondAttribute="height" multiplier="1:1" id="61i-FR-v3F"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-Ih-coP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchground" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-Ih-coP">
                                 <rect key="frame" x="0.0" y="528" width="600" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="a6J-Q6-Aid"/>
@@ -264,6 +265,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retro-Calc" translatesAutoresizingMaskIntoConstraints="NO" id="bea-uJ-bwO">
+                                <rect key="frame" x="180" y="13" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PBv-dj-uke"/>
+                                    <constraint firstAttribute="width" constant="240" id="faB-b0-vP3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aec-Kr-nUA">
+                                <rect key="frame" x="225" y="550" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XqJ-0F-MRs"/>
+                                    <constraint firstAttribute="width" constant="150" id="edT-HV-LjW"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHf-h7-okx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -271,12 +290,16 @@
                             <constraint firstItem="cR7-Ih-coP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AgR-EX-MUQ"/>
                             <constraint firstItem="bBv-bK-MG2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bjm-Ve-CCw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cR7-Ih-coP" secondAttribute="bottom" id="C1O-bL-Plz"/>
+                            <constraint firstItem="bea-uJ-bwO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GzZ-eK-SU8"/>
                             <constraint firstItem="xuC-eJ-9u7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HLo-XF-UD7"/>
+                            <constraint firstItem="aec-Kr-nUA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OEJ-5P-1e3"/>
                             <constraint firstItem="0sj-qw-fnq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PuV-oZ-PA4"/>
+                            <constraint firstItem="bea-uJ-bwO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="13" id="a7L-kZ-PrG"/>
                             <constraint firstItem="3T5-h7-Uv3" firstAttribute="top" secondItem="0sj-qw-fnq" secondAttribute="top" constant="10" id="ebz-YQ-zWJ"/>
                             <constraint firstItem="0sj-qw-fnq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="faF-hq-elt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xuC-eJ-9u7" secondAttribute="bottom" id="fxY-nH-eyj"/>
                             <constraint firstItem="bBv-bK-MG2" firstAttribute="top" secondItem="3T5-h7-Uv3" secondAttribute="bottom" constant="26" id="sWy-DJ-Fsk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aec-Kr-nUA" secondAttribute="bottom" constant="10" id="vfY-Xw-qq9"/>
                             <constraint firstAttribute="trailing" secondItem="xuC-eJ-9u7" secondAttribute="trailing" id="yRL-S0-pXN"/>
                             <constraint firstItem="xuC-eJ-9u7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zX8-kV-ddF"/>
                             <constraint firstItem="3T5-h7-Uv3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zaV-HV-N8T"/>
@@ -302,14 +325,16 @@
         <image name="7" width="111" height="114"/>
         <image name="8" width="111" height="114"/>
         <image name="9" width="111" height="114"/>
+        <image name="Retro-Calc" width="755" height="111"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
-        <image name="ground" width="888" height="72"/>
+        <image name="launchbg" width="1433" height="957"/>
+        <image name="launchground" width="999" height="225"/>
         <image name="multiply" width="111" height="114"/>
-        <image name="space-bg" width="988" height="946"/>
         <image name="subtract" width="111" height="114"/>
     </resources>
 </document>
