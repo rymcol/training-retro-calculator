@@ -14,9 +14,45 @@ class ViewController: UIViewController {
     @IBOutlet weak var display:UILabel!
 
     var buttonSound: AVAudioPlayer!
+    var userIsTyping = false
+    var calculator = Calculator()
     
     @IBAction func nubmerPressed(button: UIButton!) {
         buttonSound.play()
+        userIsTyping = true
+        if display.text == "0" {
+            display.text = String(button.tag)
+        } else {
+            display.text?.appendContentsOf(String(button.tag))
+        }
+    }
+    
+    @IBAction func operandPressed(button: UIButton!) {
+        calculator.appendToStack(display.text)
+        var operatorValue: String
+        
+        switch button.tag {
+        case 10:
+            operatorValue = "/"
+        case 11:
+            operatorValue = "*"
+        case 12:
+            operatorValue = "-"
+        case 13:
+            operatorValue = "+"
+        default:
+            operatorValue = ""
+        }
+        
+        calculator.appendToStack(operatorValue)
+        userIsTyping = false
+        display.text = "0"
+        
+    }
+    
+    
+    @IBAction func equalPressed(sender: UIButton) {
+        
     }
 
     override func viewDidLoad() {
