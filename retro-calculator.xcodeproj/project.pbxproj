@@ -13,7 +13,6 @@
 		9401C4B01C7DF24200E98F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9401C4AF1C7DF24200E98F78 /* Assets.xcassets */; };
 		9401C4B31C7DF24200E98F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9401C4B11C7DF24200E98F78 /* LaunchScreen.storyboard */; };
 		942999D51C825471008E436F /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 942999D41C825471008E436F /* btn.wav */; };
-		94531D331C88FEF400BCCC7D /* calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94531D321C88FEF400BCCC7D /* calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		9401C4B21C7DF24200E98F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9401C4B41C7DF24200E98F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		942999D41C825471008E436F /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
-		94531D321C88FEF400BCCC7D /* calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 			children = (
 				942999D41C825471008E436F /* btn.wav */,
 				9401C4A81C7DF24200E98F78 /* AppDelegate.swift */,
-				94531D321C88FEF400BCCC7D /* calculator.swift */,
 				9401C4AA1C7DF24200E98F78 /* ViewController.swift */,
 				9401C4AC1C7DF24200E98F78 /* Main.storyboard */,
 				9401C4AF1C7DF24200E98F78 /* Assets.xcassets */,
@@ -143,7 +140,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94531D331C88FEF400BCCC7D /* calculator.swift in Sources */,
 				9401C4AB1C7DF24200E98F78 /* ViewController.swift in Sources */,
 				9401C4A91C7DF24200E98F78 /* AppDelegate.swift in Sources */,
 			);

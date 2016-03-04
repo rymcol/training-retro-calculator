@@ -15,10 +15,22 @@ class ViewController: UIViewController {
 
     var buttonSound: AVAudioPlayer!
     var userIsTyping = false
-    var calculator = Calculator()
+    
+    var leftString = ""
+    var rightString = ""
+    var lastTotal = "0"
+    var currentOperation: Operation = Operation.Empty
+    
+    enum Operation: String {
+        case Multiply = "*"
+        case Divide = "/"
+        case Add = "+"
+        case Subtract = "-"
+        case Empty = ""
+    }
     
     @IBAction func nubmerPressed(button: UIButton!) {
-        buttonSound.play()
+        playSound()
         userIsTyping = true
         if display.text == "0" {
             display.text = String(button.tag)
@@ -28,35 +40,68 @@ class ViewController: UIViewController {
     }
     
     @IBAction func operandPressed(button: UIButton!) {
-        calculator.appendToStack(display.text)
-        var operatorValue: String
+        playSound()
+        
+        leftString = display.text!
         
         switch button.tag {
         case 10:
-            operatorValue = "/"
+            currentOperation = Operation.Divide
         case 11:
-            operatorValue = "*"
+            currentOperation = Operation.Multiply
         case 12:
-            operatorValue = "-"
+            currentOperation = Operation.Subtract
         case 13:
-            operatorValue = "+"
+            currentOperation = Operation.Add
         default:
-            operatorValue = ""
+            currentOperation = Operation.Empty
         }
         
-        calculator.appendToStack(operatorValue)
         userIsTyping = false
         display.text = "0"
-        
-        print(calculator.operationStack)
         
     }
     
     
     @IBAction func equalPressed(sender: UIButton) {
-        let result = calculator.calculate()
+        playSound()
+        rightString = display.text!
+        let result = calculate(currentOperation)
         display.text = result
+        lastTotal = result
         userIsTyping = false
+    }
+    
+    func calculate (operation: Operation) -> String {
+        
+        if lastTotal != "0" {
+            leftString = lastTotal
+        }
+        
+        switch operation {
+            case Operation.Add:
+                let result = Double(leftString)! + Double(rightString)!
+                return String(result)
+            case Operation.Multiply:
+                let result = Double(leftString)! * Double(rightString)!
+                return String(result)
+            case Operation.Divide:
+                let result = Double(leftString)! / Double(rightString)!
+                return String(result)
+            case Operation.Subtract:
+                let result = Double(leftString)! - Double(rightString)!
+                return String(result)
+            default:
+                return "Error"
+        }
+    }
+    
+    func playSound() {
+        if buttonSound.playing {
+            buttonSound.stop()
+        } else {
+            buttonSound.play()
+        }
     }
 
     override func viewDidLoad() {
