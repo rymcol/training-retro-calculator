@@ -48,11 +48,15 @@ class ViewController: UIViewController {
         userIsTyping = false
         display.text = "0"
         
+        print(calculator.operationStack)
+        
     }
     
     
     @IBAction func equalPressed(sender: UIButton) {
-        
+        let result = calculator.calculate()
+        display.text = result
+        userIsTyping = false
     }
 
     override func viewDidLoad() {
